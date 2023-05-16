@@ -1,0 +1,46 @@
+body{
+    margin 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #102656;
+}
+
+header { 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 100%;
+    font-family: monospace;
+}
+
+.sol {
+    width: 40%;    
+    object-fit: fill;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-header { 
+    margin: 25px; 
+    background-color: var(--light-blue);
+    border-radius: 20px;
+    border: none;
+    color: var(--dark-blue);
+    width: 12vw; 
+    height: 40px;     
+    font-size: large; 
+    cursor: pointer;
+    margin: 1em;
+    text-transform: uppercase;
+}
+
+.btn-header:hover {
+    opacity: 0.5;
+    transform: translateY(0) scale(1.5);
+}
