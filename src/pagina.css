@@ -70,3 +70,104 @@ nav.shift ul li a:hover:after {
     visibility: visible;
     height: 100%;
 }
+
+/*Estilização da classe do <main> dos cards*/
+.container-card{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-height: 100%; 
+}
+
+/*Estilização do background dos cards*/
+.cards{
+    height: 50vh;
+    width: 20vw;    
+    margin: 20px;
+    padding: 2vh 1vw;    
+    border-radius: 100px;
+    display: flex;  
+    flex-direction: column;
+    justify-content: flex-start;                      
+    text-align: center;
+    align-items: center; 
+}
+
+/*Conteúdo dos cards*/
+.conteudo-cards {
+    width: 100%;
+}
+
+/*Estilização da imagem dos personagens nos cards*/
+.card-img{
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: -7%;
+    position:relative;
+    max-width:360px;
+    max-height:300px;
+    border-radius: 25px;
+    cursor: pointer;
+    padding-left: -50px;
+    padding-right: -50px;
+    align-content: center; 
+    border-width: 45px;
+}
+.front-cards-infos{
+    position: absolute;
+    backface-visibility: hidden; 
+    text-align: center;
+}
+/*Estilização da parte de trás dos cars*/
+.back-cards-infos{
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+/*tirando os pontinho da lista*/
+li {
+    list-style-type: none;
+}
+/*Animação de girar o card, flip*/
+.flipper{
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.flip-container {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+}
+.flip-container:hover .flipper{
+    transform: rotateY(180deg);
+}
+/*Estilização da parte de trás do card*/
+.back-cards-txt{
+    color: rgb(211, 190, 239);
+    background-color: #200b5194;
+    padding: 30px;
+    border-radius: 50px;
+    margin-bottom: 35px;
+    font-size: 20px;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: -7%;
+    position:relative;
+    max-width:360px;
+    max-height:300px;
+    border-radius: 25px;
+    cursor: pointer;
+    align-content: center; 
+    border-width: 45px;
+}
+#nome-carta{
+    color:#b79be8;
+    background-color: #130534;
+    font-size: 20px ;
+}

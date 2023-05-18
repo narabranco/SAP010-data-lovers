@@ -1,11 +1,17 @@
+export const filtroNomes = (dados, nomePesquisado) => {
+  return dados.filter(cards => cards.name.toUpperCase().includes(nomePesquisado.toUpperCase())); //poderia ser id ou name  
+};
+
+
+
 // estas funciones son de ejemplo
 
 //export const example = () => {
 // return 'example';
 //};
 
-e//xport const anotherExample = () => {
- // return 'OMG';
+//xport const anotherExample = () => {
+// return 'OMG';
 //};
 
 
@@ -14,32 +20,31 @@ e//xport const anotherExample = () => {
 
 
 
-public int caughtSpeeding(int speed, boolean isBirthday) {
+//public int caughtSpeeding(int speed, boolean isBirthday) {
 
-  if (!(isBirthday)) {
+//if (!(isBirthday)) {
+//if (speed <= 60)
 
-    if (speed <= 60)
+// return 0;
 
-      return 0;
+//if (speed > 60 && speed <= 80)
 
-    if (speed > 60 && speed <= 80)
+//return 1;
 
-      return 1;
+// else
 
-    else
+//return 2;
 
-      return 2;
+// } else if (speed <= 65)
 
-  } else if (speed <= 65)
+//  return 0;
 
-    return 0;
+// else if (speed > 65 && speed <= 85)
+//
+//  return 1;
 
-  else if (speed > 65 && speed <= 85)
+// else
 
-    return 1;
+//  return 2;
 
-  else
-
-    return 2;
-
-}
+//}
