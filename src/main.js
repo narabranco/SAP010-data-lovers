@@ -4,6 +4,12 @@ import data from './data/tarot/tarot.js';
 
 const dadosTarot = data.cards;
 
+const reset = document.querySelector('#reset');//função de resetar
+reset.addEventListener('click', (event) => {
+  location.reload(event);
+});
+
+
 const root = document.getElementById("info-cards");
 
 function infosDosCardsTela (cards) {
@@ -35,3 +41,10 @@ campoPesquisar.addEventListener("input", event => {
   const filtrarCards = filtroNomes(dadosTarot, nomeDosCards); //chamada da função no arquivo data.js
   infosDosCardsTela(filtrarCards);
 });
+
+//Filtrar por tipo
+//const ordernarTipo = document.getElementById("select-type");
+//ordernarTipo.addEventListener("change", () => {
+  //const tipoOrdenado = filtroTipo(dadosTarot, ordernarTipo.value);
+ // infosDosCardsTela(tipoOrdenado)
+//});
