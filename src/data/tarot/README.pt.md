@@ -40,7 +40,7 @@ economia).
 * Neste _dataset_ você encontrará os seguintes dados para cada cartão:
 
   - Tipo: Se for arcano maior ou menor.
-  - Nome: O nome de cada uma.
+  - Nome: O nome de cada uma.(já feito)
   - Nome curto: um código identificador para cada uma.
   - Valor: Seu valor numérico associado.
   - Significado da face para cima: O significado associado à carta com a face
