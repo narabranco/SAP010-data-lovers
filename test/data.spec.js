@@ -1,4 +1,4 @@
-import { filtroNomes } from '../src/data.js';
+import { filtroNomes, SelecaoNome } from '../src/data.js';
 
 const arrayTest = [
   {
@@ -46,31 +46,15 @@ describe('filtroNomes', () => {
   
 });
 
-//describe('example', () => {
-//it('is a function', () => {
-//   expect(typeof example).toBe('function');
-//});
+describe('SelecaoNome', () => {
 
-// it('returns `example`', () => {
-//   expect(example()).toBe('example');
-//});
-//});
-
-<<<<<<< HEAD
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it('é uma função', () => {
+    expect(typeof SelecaoNome).toBe('function');
   });
+
+  it('deve buscar por um nome', () => {
+    const nomeDosCards = SelecaoNome(arrayTest, "The Magician");
+    expect(nomeDosCards.length);
+  });
+  
 });
-
-=======
-
-//escribe('anotherExample', () => {
-// it('is a function', () => {
-//  expect(typeof anotherExample).toBe('function');
-// });
-
-// it('returns `anotherExample`', () => {
-//  expect(anotherExample()).toBe('OMG');
-// });
-//});
->>>>>>> a3e3003a5463d7a4cb41506ccb48a69f7bbd5854
