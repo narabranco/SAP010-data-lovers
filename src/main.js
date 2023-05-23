@@ -1,7 +1,8 @@
-import {filtroNomes, filtroSignCima, sortByType} from './data.js';
+import {filtroNomes, filtroSignCima, sortByType, SelecaoNome} from './data.js';
 
 import data from './data/tarot/tarot.js';
 const typeOption = document.getElementById('select-type');
+const selectName = document.getElementById('select-name');
 
 const dadosTarot = data.cards;//puxa os dados todos
 
@@ -56,4 +57,10 @@ typeOption.addEventListener ('change', () => {
   const type = (typeOption).value;
   const filtro = sortByType(dadosTarot, type)
   infosDosCardsTela(filtro);
+});
+
+selectName.addEventListener ('change', () =>{
+  const name = (selectName).value;
+  const filtro = SelecaoNome(dadosTarot, name)
+  infosDosCardsTela(filtro)
 });

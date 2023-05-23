@@ -12,3 +12,8 @@ export const sortByType = (dados, type) =>{
   })
 };//funçao de puxar os tipos
 
+export const SelecaoNome = (dados, name) =>{
+  return dados.filter((dados) =>{
+    return dados.name === name
+  })
+};
