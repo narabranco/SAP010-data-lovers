@@ -47,8 +47,7 @@ describe('filtroNomes', () => {
 });
 
 describe('SelecaoNome', () => {
-
-<<<<<<< HEAD
+  
   it('é uma função', () => {
     expect(typeof SelecaoNome).toBe('function');
   });
@@ -59,26 +58,3 @@ describe('SelecaoNome', () => {
   });
   
 });
-=======
-// it('returns `example`', () => {
-//   expect(example()).toBe('example');
-//});
-//});
-
-HEAD
-it('returns `anotherExample`', () => {
-  expect(anotherExample()).toBe('OMG');
-});
-
-
-//escribe('anotherExample', () => {
-// it('is a function', () => {
-//  expect(typeof anotherExample).toBe('function');
-// });
-
-// it('returns `anotherExample`', () => {
-//  expect(anotherExample()).toBe('OMG');
-// });
-//});
->>>>>>> a3e3003a5463d7a4cb41506ccb48a69f7bbd5854
->>>>>>> 1f260f24075cbeda38d67f4dd4ff0ad9fb64d5db
