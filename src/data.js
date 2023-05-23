@@ -3,9 +3,9 @@ export const filtroNomes = (dados, nomePesquisado) => {
 };
 
 //export const filtroTipo = (dados, tipoArcano) => {
- // if (tipoArcano === "major"){
- //   return dados.filter(cards => cards.type ("major"));
+// if (tipoArcano === "major"){
+//   return dados.filter(cards => cards.type ("major"));
 //  }else if (tipoArcano === "minor"){
- //   return dados.filter(cards => cards.type ("minor"));
+//   return dados.filter(cards => cards.type ("minor"));
 //  }
 //};

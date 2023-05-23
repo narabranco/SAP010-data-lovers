@@ -1,4 +1,4 @@
-import {filtroNomes} from './data.js';
+import { filtroNomes } from './data.js';
 
 import data from './data/tarot/tarot.js';
 
@@ -12,8 +12,8 @@ reset.addEventListener('click', (event) => {
 
 const root = document.getElementById("info-cards");
 
-function infosDosCardsTela (cards) {
-  root.innerHTML = cards.map((cards) =>`
+function infosDosCardsTela(cards) {
+  root.innerHTML = cards.map((cards) => `
     <div class="cards">
         <div class="flip-container">
             <div class="flipper">
@@ -36,8 +36,8 @@ infosDosCardsTela(dadosTarot)
 
 //Pesquisar por nome
 const campoPesquisar = document.getElementById("txt-pesquisa");
-campoPesquisar.addEventListener("input", event => { 
-  const nomeDosCards= event.target.value;  //event.target.value trabalham juntos 
+campoPesquisar.addEventListener("input", event => {
+  const nomeDosCards = event.target.value;  //event.target.value trabalham juntos 
   const filtrarCards = filtroNomes(dadosTarot, nomeDosCards); //chamada da função no arquivo data.js
   infosDosCardsTela(filtrarCards);
 });
@@ -45,6 +45,6 @@ campoPesquisar.addEventListener("input", event => {
 //Filtrar por tipo
 //const ordernarTipo = document.getElementById("select-type");
 //ordernarTipo.addEventListener("change", () => {
-  //const tipoOrdenado = filtroTipo(dadosTarot, ordernarTipo.value);
- // infosDosCardsTela(tipoOrdenado)
+//const tipoOrdenado = filtroTipo(dadosTarot, ordernarTipo.value);
+// infosDosCardsTela(tipoOrdenado)
 //});
