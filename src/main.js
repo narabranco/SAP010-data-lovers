@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-import { filtroNomes } from './data.js';
-=======
-import {filtroNomes, filtroSignCima, sortByType, SelecaoNome} from './data.js';
->>>>>>> c01d75c988833c2daf57c8cb1160c4d5a1771b99
+
+import {filtroSignBaixo, filtroSignCima, sortByType, SelecaoNome} from './data.js';
 
 import data from './data/tarot/tarot.js';
 const typeOption = document.getElementById('select-type');
@@ -41,10 +38,10 @@ function infosDosCardsTela(cards) {
 infosDosCardsTela(dadosTarot)
 
 //Pesquisar por nome
-const campoPesquisar = document.getElementById("txt-pesquisa");
-campoPesquisar.addEventListener("input", event => {
-  const nomeDosCards = event.target.value;  //event.target.value trabalham juntos 
-  const filtrarCards = filtroNomes(dadosTarot, nomeDosCards); //chamada da função no arquivo data.js
+const campoFiltrarBaixo = document.getElementById("filto-sign-baixo");
+campoFiltrarBaixo.addEventListener("input", event => {
+  const filtroSigBaixo = event.target.value;  //event.target.value trabalham juntos 
+  const filtrarCards = filtroSignBaixo(dadosTarot, filtroSigBaixo); //chamada da função no arquivo data.js
   infosDosCardsTela(filtrarCards);
 });
 
@@ -56,14 +53,7 @@ campoFiltrar.addEventListener("input", event => {
   infosDosCardsTela(filtrarCards);
 });
 
-//Filtrar por tipo
-<<<<<<< HEAD
-//const ordernarTipo = document.getElementById("select-type");
-//ordernarTipo.addEventListener("change", () => {
-//const tipoOrdenado = filtroTipo(dadosTarot, ordernarTipo.value);
-// infosDosCardsTela(tipoOrdenado)
-//});
-=======
+
 typeOption.addEventListener ('change', () => {
   const type = (typeOption).value;
   const filtro = sortByType(dadosTarot, type)
@@ -75,4 +65,4 @@ selectName.addEventListener ('change', () =>{
   const filtro = SelecaoNome(dadosTarot, name)
   infosDosCardsTela(filtro)
 });
->>>>>>> c01d75c988833c2daf57c8cb1160c4d5a1771b99
+
