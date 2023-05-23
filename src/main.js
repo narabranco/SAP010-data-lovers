@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import {filtroNomes, filtroSignCima, sortByType, SelecaoNome} from './data.js';
-=======
 
 import {filtroSignBaixo, filtroSignCima, sortByType, SelecaoNome} from './data.js';
->>>>>>> f4cb8c044b490a34215a439f109e6268339df30a
 
 import data from './data/tarot/tarot.js';
 const typeOption = document.getElementById('select-type');
