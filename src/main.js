@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> c72ad4d701d422f172e812ead39dd996d2194e62
 import {filtroSignBaixo, filtroSignCima, sortByType, SelecaoNome} from './data.js';
 
 import data from './data/tarot/tarot.js';
