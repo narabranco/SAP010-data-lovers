@@ -54,11 +54,7 @@ campoFiltrar.addEventListener("input", event => {
   infosDosCardsTela(filtrarCards);
 });
 
-<<<<<<< HEAD
 //Filtrar por tipo
-=======
-
->>>>>>> f4cb8c044b490a34215a439f109e6268339df30a
 typeOption.addEventListener ('change', () => {
   const type = (typeOption).value;
   const filtro = sortByType(dadosTarot, type)
