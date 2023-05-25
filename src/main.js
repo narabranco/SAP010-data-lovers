@@ -1,5 +1,5 @@
 
-import {filtroSignBaixo, filtroSignCima, sortByType, SelecaoNome} from './data.js';
+import { filtroSignBaixo, filtroSignCima, sortByType, SelecaoNome } from './data.js';
 
 import data from './data/tarot/tarot.js';
 const typeOption = document.getElementById('select-type');
@@ -30,7 +30,7 @@ function infosDosCardsTela(cards) {
                     <li><strong>Valor: ${cards.value} </strong></li>
                     <li><strong>Short name:${cards.name_short} </strong><li>
                 </div>
-            
+                
             </div>
         </div>   
     </div>
@@ -48,22 +48,83 @@ campoFiltrarBaixo.addEventListener("input", event => {
 
 //Filtro por significado para cima
 const campoFiltrar = document.getElementById("filtro-sign-cima");
-campoFiltrar.addEventListener("input", event => { 
-  const filtroSigCima= event.target.value;  //event.target.value trabalham juntos 
+campoFiltrar.addEventListener("input", event => {
+  const filtroSigCima = event.target.value;  //event.target.value trabalham juntos 
   const filtrarCards = filtroSignCima(dadosTarot, filtroSigCima); //chamada da função no arquivo data.js
   infosDosCardsTela(filtrarCards);
 });
 
+
 //Filtrar por tipo
-typeOption.addEventListener ('change', () => {
+
+typeOption.addEventListener('change', () => {
   const type = (typeOption).value;
   const filtro = sortByType(dadosTarot, type)
   infosDosCardsTela(filtro);
 });
 //Filtrar por Nome
-selectName.addEventListener ('change', () =>{
+selectName.addEventListener('change', () => {
   const name = (selectName).value;
   const filtro = SelecaoNome(dadosTarot, name)
   infosDosCardsTela(filtro)
 });
+exibirCards
+function exibirCards(cartas) {
+  const cardsContenier = document.querySelector("#select-name");
+  cardsContenier.innerHTML = ' ';
+
+  const cardsTarot = cartas.map(carta => {
+    const cardDiv = document.createElement('div');
+    cardDiv.classList.add('card');
+    cardDiv.innerHTML = `
+      < img src = "${carta.img}" >
+   
+    <h2>${carta.type} </h2> 
+    <h2>${carta.value} </h2>
+    <h2>${carta.name} </h2>
+    <h2>${carta.name_short} </h2>
+    `
+
+    cardDiv.addEventListener('mouseover', () => {
+      carta.img.style.transform = "rotate(180deg)";
+    });
+    cardDiv.addEventListener('mouseout', () => {
+      carta.img.style.transform = "rotate(0deg)";
+    });
+    return cardDiv;
+  })
+  cardsTarot.forEach(card => {
+    cardsContenier.appendChild(card);
+  });
+}
+
+const nameArray = ['todos'];
+dadosTarot.forEach(cartas => {
+  if (Array.isArray(cartas.name)) {
+    cartas.name.forEach(name => {
+      if (!nameArray.includes(name)) {
+        nameArray.push(name);
+      }
+    });
+  } else if (typeof cartas.name === 'string' && !nameArray.includes(cartas.name)) {
+    nameArray.push(cartas.name);
+
+  }
+
+})
+const optionTodosNomes = document.createElement('option');
+optionTodosNomes.value = "Todos os Nomes";
+optionTodosNomes.textContent = "Todos os Nomes";
+selectName.appendChild(optionTodosNomes);
+
+nameArray.sort().forEach(name => {
+  if (name !== "Todos os Nomes") {
+    const option = document.createElement('option');
+    option.value = name;
+    option.textContent = name;
+    selectName.appendChild(option);
+
+  }
+});
+
 
