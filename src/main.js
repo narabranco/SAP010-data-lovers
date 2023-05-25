@@ -1,5 +1,5 @@
-
 import { filtroSignBaixo, filtroSignCima, sortByType, SelecaoNome } from './data.js';
+
 
 import data from './data/tarot/tarot.js';
 const typeOption = document.getElementById('select-type');
@@ -41,31 +41,30 @@ infosDosCardsTela(dadosTarot)
 //Pesquisar por nome
 const campoFiltrarBaixo = document.getElementById("filto-sign-baixo");
 campoFiltrarBaixo.addEventListener("input", event => {
-  const filtroSigBaixo = event.target.value;  //event.target.value trabalham juntos 
-  const filtrarCards = filtroSignBaixo(dadosTarot, filtroSigBaixo); //chamada da função no arquivo data.js
+  const filtroBaixo = event.target.value;  //event.target.value trabalham juntos 
+  const filtrarCards = filtroSignBaixo(dadosTarot, filtroBaixo); //chamada da função no arquivo data.js
   infosDosCardsTela(filtrarCards);
 });
 
 //Filtro por significado para cima
 const campoFiltrar = document.getElementById("filtro-sign-cima");
-campoFiltrar.addEventListener("input", event => {
-  const filtroSigCima = event.target.value;  //event.target.value trabalham juntos 
-  const filtrarCards = filtroSignCima(dadosTarot, filtroSigCima); //chamada da função no arquivo data.js
+campoFiltrar.addEventListener("input", event => { 
+  const filtroCima= event.target.value;  //event.target.value trabalham juntos 
+  const filtrarCards = filtroSignCima(dadosTarot, filtroCima); //chamada da função no arquivo data.js
   infosDosCardsTela(filtrarCards);
 });
-
 
 //Filtrar por tipo
 
 typeOption.addEventListener('change', () => {
   const type = (typeOption).value;
-  const filtro = sortByType(dadosTarot, type)
+  const filtro = sortByType(dadosTarot, type)//chamada da função no arquivo data.js
   infosDosCardsTela(filtro);
 });
 //Filtrar por Nome
 selectName.addEventListener('change', () => {
   const name = (selectName).value;
-  const filtro = SelecaoNome(dadosTarot, name)
+  const filtro = SelecaoNome(dadosTarot, name)//chamada da função no arquivo data.js
   infosDosCardsTela(filtro)
 });
 exibirCards
@@ -126,5 +125,3 @@ nameArray.sort().forEach(name => {
 
   }
 });
-
-

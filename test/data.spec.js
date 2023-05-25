@@ -23,10 +23,11 @@ const dados = [
     "meaning_rev": "Despotism, abuse if power, weakness, discord, sometimes even disgrace.",
   }];
 
+// //teste do nome
 describe('SelecaoNome', () => {
   it('SelecaoNome is a function', () => {
     expect(typeof SelecaoNome).toBe('function');
-  });
+  });//se é função
 
   it('deve filtrar os dados por nome', () => {
     const result = SelecaoNome(dados, "The Magician");
@@ -59,7 +60,6 @@ describe('sortByType', () => {
     expect(result.every(card => card.type === "major")).toBe(true);
   });
 });
-
 
 
 describe('filtroSignCima', () => {
