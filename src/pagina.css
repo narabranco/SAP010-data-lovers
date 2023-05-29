@@ -186,3 +186,11 @@ li {
     padding: 10px;
     font-family: monospace;
 }
+@media screen and (max-width: 800px){ /*tablets e telas menores/menu responsivo e imagem(logo)*/
+.cards{
+    display: flex;
+    justify-content: center;
+    margin-left: 60px;
+    margin-right: 60px;
+    }
+}
