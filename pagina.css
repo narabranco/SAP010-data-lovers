@@ -1,0 +1,196 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #042d43;
+}
+section {
+    height: 100vh;
+}
+/* NAV */
+nav {
+    width: 80%;
+    margin: auto;
+    background: #042d43;
+    padding: auto;
+    box-shadow: 0px 5px 0px #000000;
+}
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    transition: all .5s;
+}
+nav ul li a:hover {
+    color: #000000;
+}
+
+/*ANIMAÇÃO DA NAV*/
+nav.shift ul li a {
+    position:relative;
+    z-index: 1;
+}
+nav.shift ul li a:hover {
+    color: #000000;
+}
+nav.shift ul li a:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 1px;
+    content: '.';
+    color: transparent;
+    background: #4670b3;
+    visibility: none;
+    opacity: 0;
+    z-index: -1;
+}
+nav.shift ul li a:hover:after {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+
+/*Estilização do container dos cards*/
+.container-card{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-height: 100%; 
+    position: absolute;
+}
+
+/*Estilização do background dos cards*/
+.cards{
+    height: 50vh;
+    width: 20vw;    
+    margin: 20px;
+    padding: 2vh 1vw;    
+    border-radius: 100px;
+    display: flex;  
+    flex-direction: column;
+    justify-content: flex-start;                      
+    text-align: center;
+    align-items: center;
+}
+
+/*Conteúdo dos cards*/
+.conteudo-cards {
+    width: 100%;
+}
+
+/*Estilização da imagem dos personagens nos cards*/
+.card-img{
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: -7%;
+    position:absolute;
+    max-width:360px;
+    max-height:300px;
+    border-radius: 25px;
+    cursor: pointer;
+    padding-left: -50px;
+    padding-right: -50px;
+    align-content: center; 
+    border-width: 45px;
+}
+/*frente das cartas*/
+.front-cards-infos{
+    position: absolute;
+    backface-visibility: hidden; 
+    text-align: center;
+}
+/*Estilização da parte de trás dos cars*/
+.back-cards-infos{
+    text-align: center;
+    font-size: 15px;
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+}
+/*tirando os pontinho da lista*/
+li {
+    list-style-type: none;
+}
+/*Animação de girar o card, flip*/
+.flipper{
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.flip-container {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+}
+.flip-container:hover .flipper{
+    transform: rotateY(180deg);
+}
+/*Estilização da parte de trás do card*/
+.back-cards-txt{
+    color: rgb(211, 190, 239);
+    background-color: #200b5194;
+    padding: 30px;
+    border-radius: 50px;
+    margin-bottom: 35px;
+    font-size: 20px;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: -7%;
+    position:relative;
+    max-width:360px;
+    max-height:300px;
+    border-radius: 25px;
+    cursor: pointer;
+    align-content: center; 
+    border-width: 45px;
+}
+#nome-carta{
+    color:#b79be8;
+    background-color: #130534;
+    font-size: 20px ;
+}
+/*filtros*/
+.option-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-family: monospace;
+}
+@media screen and (max-width: 800px){ /*tablets e telas menores/menu responsivo e imagem(logo)*/
+.cards{
+    display: flex;
+    justify-content: center;
+    margin-left: 60px;
+    margin-right: 60px;
+    }
+}

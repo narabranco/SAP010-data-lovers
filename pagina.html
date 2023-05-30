@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Cartas de Tarot</title>
+    <link rel="stylesheet"  href="pagina.css" />
+  </head>
+  
+  <body>
+    <header>
+        <nav class="shift">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobre.html">Sobre nós</a></li>
+          </ul>
+        </nav>
+    </header>
+    
+    <main>
+      <div class="option-container">
+        <label>
+          <select id="select-type" class="btn-option"><!--filtro por tipo-->
+            <option value="" selected disabled hidden>Tipo</option>
+            <option value="major">Arcano Maior</option>
+            <option value="minor">Arcano Menor</option>
+          </select>
+        </label>
+
+        <label>
+          <select id="select-name" class="btn-nome">
+            
+          </select>
+        </label>
+        
+        <label>
+          <div class="barra-pesquisa" id="menu-sig">
+
+            <input type="text" class="campo-pesquisa-txt" id="filtro-sign-cima" placeholder="Significado para cima">
+          
+
+            <a class="pesquisa-botao"></a>
+          </div>
+        </label>
+
+        <label>
+        <div class="barra-pesquisa" id="menu"><!--filtro significado para baixo via input-->
+          <input type="text" class="campo-pesquisa-txt" id="filto-sign-baixo" placeholder="Significado para baixo">
+          <a class="pesquisa-botao"></a>
+        </div>
+      </label>
+
+      <label>
+        <button id="reset" class="btn-option-reset">limpar<!--reseta a pesquisa-->
+        </button>
+      </label>
+
+    </div>
+
+        <div class="conteudo-cards">
+        <section>
+          <div class="container-card" id="info-cards"></div>
+        </section>
+        </div>
+    </main>
+
+    <script src="main.js" type="module"></script>
+
+  </body>
+
+</html>
